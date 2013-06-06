@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Email:</b>
+  <%= @auth_person.email %>
+</p>
+
+<p>
+  <b>Pass:</b>
+  <%= @auth_person.pass %>
+</p>
+
+<p>
+  <b>Salt:</b>
+  <%= @auth_person.salt %>
+</p>
+
+<p>
+  <b>Login count:</b>
+  <%= @auth_person.login_count %>
+</p>
+
+<p>
+  <b>Fail count:</b>
+  <%= @auth_person.fail_count %>
+</p>
+
+<p>
+  <b>Last login ip:</b>
+  <%= @auth_person.last_login_ip %>
+</p>
+
+
+<%= link_to 'Edit', edit_auth_person_path(@auth_person) %> |
+<%= link_to 'Back', auth_people_path %>

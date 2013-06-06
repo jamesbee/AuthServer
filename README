@@ -1,0 +1,19 @@
+API:
+    xml auth/step_one( POST:[email,password] )
+    POST "email=&password=" to auth/step_one service, if access granted, return response.xml AS:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response>
+      <challange> 5b70af1ff2ebc80dc585c17e4bf3a638[as random 32 hex string] </challange>
+      <granted> true </granted>
+    </response>
+
+    Otherwish return response.xml AS:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <response>
+      <challange> [NULL] </challange>
+      <granted> false </granted>
+    </response>
+
+

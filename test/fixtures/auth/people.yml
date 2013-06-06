@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  pass: MyString
+  salt: MyString
+  login_count: 1
+  fail_count: 1
+  last_login_ip: MyString
+
+two:
+  email: MyString
+  pass: MyString
+  salt: MyString
+  login_count: 1
+  fail_count: 1
+  last_login_ip: MyString

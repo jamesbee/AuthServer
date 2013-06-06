@@ -1,0 +1,33 @@
+<h1>Listing auth_people</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Pass</th>
+    <th>Salt</th>
+    <th>Login count</th>
+    <th>Fail count</th>
+    <th>Last login ip</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @auth_people.each do |auth_person| %>
+  <tr>
+    <td><%= auth_person.email %></td>
+    <td><%= auth_person.pass %></td>
+    <td><%= auth_person.salt %></td>
+    <td><%= auth_person.login_count %></td>
+    <td><%= auth_person.fail_count %></td>
+    <td><%= auth_person.last_login_ip %></td>
+    <td><%= link_to 'Show', auth_person %></td>
+    <td><%= link_to 'Edit', edit_auth_person_path(auth_person) %></td>
+    <td><%= link_to 'Destroy', auth_person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Person', new_auth_person_path %>
